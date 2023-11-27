@@ -11,8 +11,9 @@ BEARER_AUTH = os.getenv("BEARER_AUTH")
 nutritionix_endpoint = "https://trackapi.nutritionix.com/v2/natural/exercise"
 sheety_endpoint = "https://api.sheety.co/7fe796b00789ab35642be56f51df98a0/workoutTracking/workouts"
 
-# Input query from the user about their exercise
+# Input query from the user about their exercise and physical details
 query = input("What exercise did you do today?\n ")
+
 
 # Headers for the Nutritionix API request, including authentication details
 headers = {
@@ -25,9 +26,9 @@ headers = {
 params = {
     "query": query,
     "gender": "male",
-    "weight_kg": 56.6,
+    "weight_kg": 46.6,
     "height_cm": 177.8,
-    "age": 32
+    "age": 30
 }
 
 # Headers for the Sheety API request, including the Bearer token for authentication
